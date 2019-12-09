@@ -1,0 +1,27 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10  
+    commands:
+      - echo Installing Mocha...
+      - npm install -g mocha
+      
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies...
+      - npm install
+      - npm install unit.js
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Compiling the Node.js code
+      - mocha test.js
+      - npm install sonarqube-scanner
+     
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - sonar: "node sonar-project.js"
+      - npm run sonar sonar:sonar -Dsonar.host.url=http://ec2-3-94-168-153.compute-1.amazonaws.com -Dsonar.login=4b10472faeabd02e136783eba7a052c02e0ff79a -Dsonar.login=admin -Dsonar.password=admin
