@@ -6,7 +6,7 @@ phases:
       nodejs: 10  
     commands:
       - echo Installing Mocha...
-      - npm install -g mocha
+     
       
   pre_build:
     commands:
@@ -17,7 +17,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Compiling the Node.js code
-      - mocha test.js
+    
      
      
   post_build:
