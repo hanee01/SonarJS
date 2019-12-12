@@ -17,7 +17,7 @@ phases:
       - echo Build started on `date`
       - echo Compiling the Node.js code
       - npm install -g sonarqube-scanner
-      - sonar-scanner -Dsonar.host.url=http://http://ec2-54-210-190-189.compute-1.amazonaws.com -Dsonar.login=4b10472faeabd02e136783eba7a052c02e0ff79a -Dsonar.login=admin -Dsonar.password=admin
+      - sonar-scanner -Dsonar.host.url=http://ec2-54-210-190-189.compute-1.amazonaws.com -Dsonar.login=4b10472faeabd02e136783eba7a052c02e0ff79a -Dsonar.login=admin -Dsonar.password=admin
      
   post_build:
     commands:
