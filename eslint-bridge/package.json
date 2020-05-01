@@ -9,7 +9,9 @@
     "test": "jest",
     "format": "prettier --write \"{src,tests}/**/!(*.lint).ts\"",
     "compile": "tsc -b src tests",
-    "jar": "npm pack && mkdirp target/classes && mv eslint-bridge-1.0.0.tgz target/classes"
+    "jar": "npm pack && mkdirp target/classes && mv eslint-bridge-1.0.0.tgz target/classes",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -51,7 +53,8 @@
     "eslint-plugin-sonarjs": "0.5.0",
     "express": "4.16.3",
     "run-node": "1.0.0",
-    "vue-eslint-parser": "6.0.4"
+    "vue-eslint-parser": "6.0.4",
+    "snyk": "^1.316.1"
   },
   "bundledDependencies": [
     "@typescript-eslint/eslint-plugin",
@@ -74,5 +77,6 @@
   "files": [
     "lib/",
     "bin/"
-  ]
+  ],
+  "snyk": true
 }
