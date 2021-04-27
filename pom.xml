@@ -74,7 +74,7 @@
     <sonarQubeMinVersion>7.9</sonarQubeMinVersion>
 
     <assertj.version>3.5.2</assertj.version>
-    <commons-io.version>2.5</commons-io.version>
+    <commons-io.version>2.7</commons-io.version>
     <commons-lang.version>2.6</commons-lang.version>
     <guava.version>28.0-jre</guava.version>
     <junit.version>4.12</junit.version>
