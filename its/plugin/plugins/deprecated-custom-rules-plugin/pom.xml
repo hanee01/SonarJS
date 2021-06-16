@@ -23,7 +23,7 @@
       <groupId>org.sonarsource.javascript</groupId>
       <artifactId>sonar-javascript-plugin</artifactId>
       <!-- intentionally old version so we can observe behavior with newer version available at runtime -->
-      <version>4.1.0.6085</version>
+      <version>7.0.0.14528</version>
       <type>sonar-plugin</type>
     </dependency>
   </dependencies>
